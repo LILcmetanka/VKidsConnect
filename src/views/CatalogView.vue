@@ -1,6 +1,6 @@
 <template>
   <div class="catalog-page">
-    <AppHeader logoSrc="src/image/logo_1.png" />
+    <AppHeader :logoSrc="logo1" />
     <div class="gray-container">
       <SearchBar />
 
@@ -104,6 +104,7 @@ import AppHeader from "../components/AppHeader.vue";
 import SearchBar from "../components/SearchBar.vue";
 import FilterSidebar from "../components/FilterSidebar.vue";
 import SportCard from "../components/SportCard.vue";
+import logo1 from "@/image/logo_1.png";
 </script>
 
 <style scoped>

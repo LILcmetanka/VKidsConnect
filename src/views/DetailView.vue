@@ -1,12 +1,9 @@
 <template>
   <div class="detail-page">
-    <!-- Шапка с PNG логотипом -->
-    <AppHeader logoSrc="src/image/logo_2.png" />
+    <AppHeader :logoSrc="logo2" />
 
-    <!-- Серый контейнер с такими же отступами как шапка -->
     <div class="gray-container">
       <div class="container-inner">
-        <!-- Кнопки навигации -->
         <div class="top-bar">
           <button class="back-btn" @click="$router.push('/')">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -32,13 +29,11 @@
           </button>
         </div>
 
-        <!-- Заголовок -->
         <h1 class="page-title">Лёгкая атлетика (в Юбилейном мкр.)</h1>
 
-        <!-- Карточка с изображением -->
         <div class="top-card">
           <div class="card-image">
-            <img src="../image/image.png" alt="Лёгкая атлетика" />
+            <img :src="detailImage" alt="Лёгкая атлетика" />
           </div>
           <div class="card-info">
             <div class="top-tags">
@@ -80,7 +75,6 @@
           </div>
         </div>
 
-        <!-- НОВЫЙ блок: ГРУППЫ и РАСПИСАНИЕ в одном белом окне -->
         <div class="groups-schedule-container">
           <div class="groups-section">
             <h2 class="block-title">ГРУППЫ</h2>
@@ -163,7 +157,6 @@
           </div>
         </div>
 
-        <!-- ОПИСАНИЕ -->
         <div class="info-block full-width">
           <h2 class="block-title">ОПИСАНИЕ</h2>
           <p class="description-text">
@@ -173,7 +166,6 @@
           </p>
         </div>
 
-        <!-- СОДЕРЖАНИЕ ПРОГРАММЫ -->
         <div class="info-block full-width">
           <h2 class="block-title">СОДЕРЖАНИЕ ПРОГРАММЫ</h2>
 
@@ -297,6 +289,8 @@
 <script setup>
 import { ref } from "vue";
 import AppHeader from "../components/AppHeader.vue";
+import logo2 from "@/image/logo_2.png";
+import detailImage from "@/image/image.png";
 
 const openLevels = ref({
   basic: true,
